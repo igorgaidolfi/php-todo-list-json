@@ -15,6 +15,12 @@
                     <div class="col-12">
                         <h1 class="text-center">Todolist</h1>
                     </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" v-model="todo" placeholder="prova" @keyup.enter="reply">
+                            <button class="btn btn-primary" @click="reply">Invia</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
