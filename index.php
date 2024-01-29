@@ -16,9 +16,14 @@
                         <h1 class="text-center">Todolist</h1>
                     </div>
                     <div class="col-12">
+                        <ul>
+                            <li v-for="todo,key in todoList" :key="key">{{todo.text}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
                         <div class="input-group">
-                            <input type="text" class="form-control" v-model="todo" placeholder="prova" @keyup.enter="reply">
-                            <button class="btn btn-primary" @click="reply">Invia</button>
+                            <input type="text" class="form-control" v-model="toDo" placeholder="prova" @keyup.enter="addTodo">
+                            <button class="btn btn-primary" @click="addTodo">Invia</button>
                         </div>
                     </div>
                 </div>

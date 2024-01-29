@@ -3,24 +3,29 @@ createApp({
     data() {
         return {
             apiUrl : 'server.php',
-            todo: '',
+            toDo: '',
+            todoList:[],
         }
     },
     mounted() {
-        this.request()
+        this.getTodoList()
     },
     methods: {
-        reply(){
+        addTodo(){
             const data ={
-                todo: this.todo
+                toDo: this.toDo
             }
             axios.post(this.apiUrl, data,{
                 headers: { 'Content-type': 'multipart/form-data'}
             }).then((response) => {
+                this.toDo = ''
+                this.todoList = response.data
             })
         },
-        request(){
+        getTodoList(){
             axios.get(this.apiUrl).then((response) => {
+                console.log(response.data)
+                this.todoList = response.data
             })
 
         },
