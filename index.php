@@ -10,8 +10,14 @@
     </head>
     <body>
         <div id="app">
-            
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Todolist</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src=".js/script.js"></script> 
+        <script src="./js/script.js"></script> 
     </body>
 </html>
